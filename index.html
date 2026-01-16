@@ -125,6 +125,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 30px;
             margin-top: 20px;
+            page-break-inside: avoid;
         }
         
         .value-prop-item {
@@ -187,7 +188,8 @@
         
         .analytics-section {
             margin-top: 25px;
-            page-break-before: avoid;
+            page-break-before: auto;
+            page-break-inside: avoid;
         }
         
         .analytics-images {
@@ -314,6 +316,15 @@
                 print-color-adjust: exact;
             }
             
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .two-column {
+                page-break-inside: avoid;
+                page-break-before: auto;
+            }
+            
             .metric-card,
             .value-prop-item,
             .why-partner,
@@ -321,14 +332,16 @@
             .cta-section {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
+                page-break-inside: avoid;
             }
             
             .analytics-images {
                 page-break-inside: avoid;
+                page-break-before: auto;
             }
             
             @page {
-                margin: 0;
+                margin: 0.5cm;
                 size: A4;
             }
         }
